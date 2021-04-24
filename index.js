@@ -1,5 +1,7 @@
-let button = document.getElementById("transaction-button")
-button.onclick = (e) => {
+let form = document.getElementById()
+form.onsubmit = (e) => {
+    console.log(e.target["transaction-button"].value)
+    console.log(e.target.amount.value)
+
     e.preventDefault()
-    console.log("button")
 }

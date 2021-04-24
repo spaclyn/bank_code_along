@@ -23,13 +23,14 @@
 </head>
 <body>
 
-    <div class="container-x1">
+    <div class="container-x1 clear-padding">
         <div class="banner">
             <h1 class="text-center">Crisp Banking</h1>
         </div>
         <div class="row">
             <div class="col text-center">
                 <h1 class="balance">Balance</h1>
+                <p id="account-balance">$ 0.00</p>
             </div>
             <div class="col form-container">
                 <form class="card transaction-card">
@@ -37,7 +38,8 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="Amount" class="form-label">Amount</label>
-                            <input type="number" class="form-control" id="amount" name="amount">
+                         <div id="amount-input"> <p>$</p>   <input type="number" class="form-control" id="amount" name="amount">
+                             </div>
                           </div>
                           <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Type</label>
