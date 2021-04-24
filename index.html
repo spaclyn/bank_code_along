@@ -33,29 +33,44 @@
                 <p id="account-balance">$ 0.00</p>
             </div>
             <div class="col form-container">
-                <form class="card transaction-card">
-                    <div class="card-header">Submit Transaction</div>
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <label for="Amount" class="form-label">Amount</label>
-                         <div id="amount-input"> <p>$</p>   <input type="number" class="form-control" id="amount" name="amount">
-                             </div>
-                          </div>
-                          <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Type</label>
-                            <select class="form-select" id="transaction-type" name="transaction-type">
-                                <option value="1">Deposit</option>
-                                <option value="2">Withdraw</option>
-                            </select>
-
-
-                          </div>
-
-                          <button id="transaction-button"type="submit" class="btn btn-primary ">Submit</button>
+                <form class="card transaction-card" id="transaction-form">
+                  <div class="card-header">Submit Transaction</div>
+                  <div class="card-body">
+                    <div class="mb-3">
+                      <label for="amount" class="form-label">Amount: </label>
+                      <div id="amount-input">
+                        <p>$</p><input type="number" step=".01"  class="form-control" id="amount" name="amount">
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="transaction-type" class="form-label">Type</label>
+                      <select class="form-select" id="transaction-type" name="transaction-type">
+                        <option value="1">Deposit</option>
+                        <option value="2">Withdraw</option>
+                      </select>
+                    </div>
+                    <button id="transaction-button" type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
+
+        <table class="table table-borderless">
+            <thread class="table-light">
+                <tr>
+                    <th scope="col">Transaction ID</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Starting Amount</th>
+                    <th scope="col">New Balance</th>
+                </tr>
+            </thread>
+            <tbody id="transaction-log">
+
+            </tbody>
+        </table>
+
+
     </div>
 
     <!-- BOOTSTRAP JS -->
